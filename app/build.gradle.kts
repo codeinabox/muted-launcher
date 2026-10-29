@@ -49,7 +49,7 @@ detekt {
   buildUponDefaultConfig = true
 }
 
-tasks.check { dependsOn("detekt", "ktfmtCheck") }
+tasks.check { dependsOn("detekt", "ktfmtCheck", "lintDebug") }
 
 dependencies {
   implementation(platform(libs.androidx.compose.bom))
