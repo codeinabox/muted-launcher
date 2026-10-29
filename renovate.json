@@ -2,5 +2,27 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "semanticCommitType": "chore",
+  "packageRules": [
+    {
+      "description": "CI action updates -> ci",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci"
+    },
+    {
+      "description": "Gradle build plumbing -> build (plugins, toolchain, wrapper)",
+      "matchManagers": ["gradle", "gradle-wrapper"],
+      "excludePackagePrefixes": [
+        "androidx.",
+        "io.nlopez.compose.rules"
+      ],
+      "semanticCommitType": "build"
+    },
+    {
+      "description": "Gradle runtime libraries -> fix",
+      "matchManagers": ["gradle"],
+      "semanticCommitType": "fix"
+    }
   ]
 }
