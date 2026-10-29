@@ -1,17 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "semanticCommitType": "chore",
   "packageRules": [
     {
-      "description": "GitHub Actions updates -> ci",
-      "matchManagers": ["github-actions"],
-      "semanticCommitType": "ci"
+      "description": "Gradle libraries default to fix (runtime libs ship in the APK)",
+      "matchManagers": ["gradle"],
+      "semanticCommitType": "fix"
     },
     {
-      "description": "Test-only libraries -> chore (never shipped in the APK)",
+      "description": "Build plumbing override: plugins (AGP, Kotlin, detekt, ktfmt) and wrapper -> build",
+      "matchManagers": ["gradle", "gradle-wrapper"],
+      "excludePackagePrefixes": ["androidx."],
+      "semanticCommitType": "build"
+    },
+    {
+      "description": "Test-only libraries -> chore (never shipped)",
       "matchPackageNames": [
         "junit:junit",
         "androidx.test.ext:junit",
@@ -25,15 +29,9 @@
       "semanticCommitType": "chore"
     },
     {
-      "description": "Gradle build plumbing -> build (plugins, toolchain, wrapper)",
-      "matchManagers": ["gradle", "gradle-wrapper"],
-      "excludePackagePrefixes": ["androidx."],
-      "semanticCommitType": "build"
-    },
-    {
-      "description": "Gradle runtime libraries (shipped in the APK) -> fix",
-      "matchManagers": ["gradle"],
-      "semanticCommitType": "fix"
+      "description": "GitHub Actions -> ci",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci"
     }
   ]
 }
