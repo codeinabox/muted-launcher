@@ -4,7 +4,13 @@
   "include-v-in-tag": true,
   "packages": {
     ".": {
-      "extra-files": [{ "type": "generic", "path": "app/build.gradle.kts" }]
+      "initial-version": "0.1.0",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "app/build.gradle.kts"
+        }
+      ]
     }
   }
 }
