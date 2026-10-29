@@ -6,21 +6,32 @@
   "semanticCommitType": "chore",
   "packageRules": [
     {
-      "description": "CI action updates -> ci",
+      "description": "GitHub Actions updates -> ci",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
     },
     {
+      "description": "Test-only libraries -> chore (never shipped in the APK)",
+      "matchPackageNames": [
+        "junit:junit",
+        "androidx.test.ext:junit",
+        "androidx.test:runner"
+      ],
+      "semanticCommitType": "chore"
+    },
+    {
+      "description": "Detekt Compose lint rules -> chore (analysis tooling, never in the APK)",
+      "matchPackagePrefixes": ["io.nlopez.compose.rules"],
+      "semanticCommitType": "chore"
+    },
+    {
       "description": "Gradle build plumbing -> build (plugins, toolchain, wrapper)",
       "matchManagers": ["gradle", "gradle-wrapper"],
-      "excludePackagePrefixes": [
-        "androidx.",
-        "io.nlopez.compose.rules"
-      ],
+      "excludePackagePrefixes": ["androidx."],
       "semanticCommitType": "build"
     },
     {
-      "description": "Gradle runtime libraries -> fix",
+      "description": "Gradle runtime libraries (shipped in the APK) -> fix",
       "matchManagers": ["gradle"],
       "semanticCommitType": "fix"
     }
