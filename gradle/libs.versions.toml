@@ -2,7 +2,7 @@
 agp = "9.5.0"
 kotlin = "2.4.21"
 detekt = "2.0.0-alpha.6"
-detektCompose = "0.6.4"
+detektCompose = "0.6.8"
 ktfmt = "0.27.0"
 composeBom = "2026.09.00"
 activityCompose = "1.13.0"
