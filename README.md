@@ -19,7 +19,7 @@ A minimal Android home screen app. It shows an alphabetical, text-only list of y
 
 Requirements:
 
-- JDK 17 (set `JAVA_HOME` to it)
+- JDK 21 (auto-provisioned by Gradle on first run if absent)
 - Android SDK (the Gradle build downloads missing platforms if the licences are accepted)
 
 Point Gradle at your SDK, either by setting `ANDROID_HOME` or by creating `local.properties` (not committed) containing:
