@@ -32,6 +32,11 @@
       "description": "GitHub Actions -> ci",
       "matchManagers": ["github-actions"],
       "semanticCommitType": "ci"
+    },
+    {
+      "description": "Daemon JVM pin is hand-managed (F-Droid buildserver has JDK 21 only); never auto-update",
+      "matchFileNames": ["gradle/gradle-daemon-jvm.properties"],
+      "enabled": false
     }
   ]
 }
