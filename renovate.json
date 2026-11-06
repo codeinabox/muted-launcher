@@ -6,6 +6,7 @@
     {
       "description": "Gradle libraries default to fix (runtime libs ship in the APK)",
       "matchManagers": ["gradle"],
+      "minimumReleaseAge": "14 days",
       "semanticCommitType": "fix"
     },
     {
