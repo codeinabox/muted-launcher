@@ -37,6 +37,11 @@
       "description": "Daemon JVM pin is hand-managed (F-Droid buildserver has JDK 21 only); never auto-update",
       "matchFileNames": ["gradle/gradle-daemon-jvm.properties"],
       "enabled": false
+    },
+    {
+      "description": "Workflow JDK pin is hand-managed (must match daemon JVM pin, F-Droid buildserver has JDK 21 only); never auto-update",
+      "matchPackageNames": ["java-jdk"],
+      "enabled": false
     }
   ]
 }
