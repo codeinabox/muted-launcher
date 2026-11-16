@@ -32,6 +32,7 @@
     {
       "description": "GitHub Actions -> ci",
       "matchManagers": ["github-actions"],
+      "minimumReleaseAge": "7 days",
       "semanticCommitType": "ci"
     },
     {
