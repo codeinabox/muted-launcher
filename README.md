@@ -1,5 +1,7 @@
 # Muted Launcher
 
+[<img src="badge_obtainium.png" alt="Get it on Obtainium" width="161">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%20%22io.github.codeinabox.mutedlauncher%22%2C%20%22url%22%3A%20%22https%3A%2F%2Fgithub.com%2Fcodeinabox%2Fmuted-launcher%22%2C%20%22author%22%3A%20%22codeinabox%22%2C%20%22name%22%3A%20%22Muted%20Launcher%22%7D)
+
 A minimal Android home screen app. It shows an alphabetical, text-only list of your apps drawn directly over the system wallpaper, with text colours that follow the wallpaper.
 
 ## Features
