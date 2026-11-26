@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto Backup rules: include persisted settings (DataStore Preferences) in
+     cloud backup. Sideloaded installs receive no backup; this is accepted. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="datastore/" />
+    </cloud-backup>
+</data-extraction-rules>
