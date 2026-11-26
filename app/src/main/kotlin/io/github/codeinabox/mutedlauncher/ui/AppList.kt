@@ -26,14 +26,16 @@ import io.github.codeinabox.mutedlauncher.settings.ListFontSize
 import io.github.codeinabox.mutedlauncher.theme.TextColors
 
 private const val OUTLINE_WIDTH_DP = 1.5f
+private const val SMALL_FONT_SIZE_SP = 16
 private const val MEDIUM_FONT_SIZE_SP = 22
+private const val LARGE_FONT_SIZE_SP = 28
 
 /** Sp size for entry text, a pure function of [ListFontSize]. Exposed for testing. */
 internal fun fontSizeSpFor(size: ListFontSize): Int =
     when (size) {
-      ListFontSize.Small -> 16
+      ListFontSize.Small -> SMALL_FONT_SIZE_SP
       ListFontSize.Medium -> MEDIUM_FONT_SIZE_SP
-      ListFontSize.Large -> 28
+      ListFontSize.Large -> LARGE_FONT_SIZE_SP
     }
 
 /** Text shown for an entry: the bare label, or "Label (disambiguator)" when one is present. */
@@ -131,8 +133,8 @@ private fun OutlinedText(
 }
 
 /**
- * Entry text with the outline applied when [outlineEnabled] is on, plain fill otherwise; one
- * call site keeps every row — app entries and the settings entry — on the same treatment.
+ * Entry text with the outline applied when [outlineEnabled] is on, plain fill otherwise; one call
+ * site keeps every row — app entries and the settings entry — on the same treatment.
  */
 @Composable
 private fun EntryText(

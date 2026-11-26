@@ -176,7 +176,10 @@ class AppListDisplayTest {
 
     assertNull(style.drawStyle)
     assertFalse(AppSettings(outlineEnabled = false).outlineEnabled)
-    assertEquals(entryTextStyle(TextColors(textColor = 0xFFFFFFFF.toInt(), useDarkBars = false)), style)
+    assertEquals(
+        entryTextStyle(TextColors(textColor = 0xFFFFFFFF.toInt(), useDarkBars = false)),
+        style,
+    )
   }
 
   @Test
