@@ -14,7 +14,7 @@ fun versionCodeFor(versionName: String): Int {
 }
 
 // x-release-please-start-version
-val appVersionName = "0.1.0"
+val appVersionName = "0.2.0"
 // x-release-please-end
 
 val appVersionCode = versionCodeFor(appVersionName)
